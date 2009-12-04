@@ -251,7 +251,7 @@ class AuthenticatedGenerator < Rails::Generator::NamedBase
         m.route_name('register', '/register', {:controller => model_controller_plural_name, :action => 'create'})
         m.route_name('login',    '/login',    {:controller => controller_controller_name, :action => 'new'})
         m.route_name('logout',   '/logout',   {:controller => controller_controller_name, :action => 'destroy'})
-        m.route_name('activate',   '/activate/:activation_code',   {:controller => controller_controller_name, :action => 'activate'})
+        m.route_name('activate',   '/activate/:activation_code',   {:controller => model_controller_plural_name, :action => 'activate'})
       end
     end
 
